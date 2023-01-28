@@ -17,6 +17,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_STATE_HOME="$HOME/.local/state"
+export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 export INPUTRC="$XDG_CONFIG_HOME/shell/inputrc"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
@@ -32,7 +33,6 @@ export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
 export GOPATH="$XDG_DATA_HOME/go"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
-export HISTFILE="$XDG_DATA_HOME/history"
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export GEM_HOME="$XDG_DATA_HOME/gem"
 #Cache
@@ -55,8 +55,9 @@ export MOZ_USE_XINPUT2="1" # Mozilla smooth scrolling/touchpads.
 # PATH:
 export PATH="$PATH:${$(find $HOME/.local/bin -type d -printf %p:)%%:}" # Adds `~/.local/bin` to $PATH
 export PATH="$PATH:${XDG_DATA_HOME:-$HOME/.local/share}/go/bin"
+export PATH="$PATH:${XDG_DATA_HOME:-$HOME/.local/share}/cargo/bin"
 export PATH="$PATH:${XDG_DATA_HOME:-$HOME/.local/share}/scripts"
 export PATH="$PATH:$HOME/.local/bin"
 
 # Rust
-. "/home/j/.local/share/cargo/env"
+[[ -f "$HOME/.local/share/cargo/env" ]] && . "$HOME/.local/share/cargo/env"

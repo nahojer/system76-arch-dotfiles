@@ -4,6 +4,7 @@
 
 HISTSIZE=10000000
 SAVEHIST=10000000
+export HISTFILE="${XDG_DATA_HOME:-#HOME/.local/share}/history"
 
 
 ###
@@ -154,6 +155,7 @@ alias \
 	rm="rm -I" \
   ls="exa" \
 	mkdir="mkdir -p" \
+	vim="vim -i ~/.cache/vim/info" \
   grep='grep --color=auto' \
   df='df -h' \
   tree="tree -aFC --dirsfirst -I .git" \
@@ -164,3 +166,10 @@ alias \
   zshrc="$EDITOR $ZDOTDIR/.zshrc" \
   srczsh="source $ZDOTDIR/.zshrc" \
   unlock="sudo rm /var/lib/pacman/db.lck"
+
+###
+# X11
+###
+
+# Start graphical server on user's current tty if not already running
+#[[ "$(tty)" = "/dev/tty1" ]] && ! pidof -s Xorg >/dev/null 2>&1 && exec startx "$XINITRC"
