@@ -8,5 +8,5 @@ function run {
 }
 
 run sxhkd -c "$HOME/.config/bspwm/sxhkd/sxhkdrc"
-run picom --config "$HOME/.config/picom/picom.conf"
+run picom
 run nitrogen --restore
