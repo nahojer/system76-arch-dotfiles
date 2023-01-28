@@ -1,0 +1,38 @@
+theme = "goplayground_dark"
+
+[editor]
+line-number = "relative"
+mouse = false
+cursorline = true
+bufferline = "multiple"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.statusline]
+left = ["mode", "file-name", "spinner"]
+center = []
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+
+[editor.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+
+# [editor.indent-guides]
+# render = true
+
+[keys.normal]
+'{' = ["goto_prev_paragraph", "collapse_selection", "move_line_up"]
+'}' = ["goto_next_paragraph", "collapse_selection"]
+'C-u' = ["page_up", "align_view_center"]
+'C-d' = ["page_down", "align_view_center"]
+'A-w' = ':write'
