@@ -172,4 +172,11 @@ alias \
 ###
 
 # Start graphical server on user's current tty if not already running
-#[[ "$(tty)" = "/dev/tty1" ]] && ! pidof -s Xorg >/dev/null 2>&1 && exec startx "$XINITRC"
+startx11() {
+	if ! pidof -s Xorg >/dev/null 2>&1 ;
+	then
+		exec startx "$XINITRC" > "$XDG_DATA_HOME/xorg/startx_$(date +'%d-%m-%Y_%s').log" 2>&1
+	fi
+}
+
+[[ "$(tty)" = "/dev/tty1" ]] && ! pidof -s Xorg >/dev/null 2>&1 && exec startx "$XINITRC" > "$XDG_DATA_HOME/xorg/startx_$(date +'%d-%m-%Y_%s').log" 2>&1
