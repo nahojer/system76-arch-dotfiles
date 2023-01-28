@@ -4,6 +4,8 @@ pgrep -x picom > /dev/null || picom --config "$HOME/.config/picom/picom.conf" --
 
 pgrep -x sxhkd > /dev/null || sxhkd -c "$HOME/.config/bspwm/sxhkd/sxhkdrc" &
 
+nitrogen --restore &
+
 bspc monitor -d I II III IV V VI VII VIII IX X
 
 bspc config border_width         2

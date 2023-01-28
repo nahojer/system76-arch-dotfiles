@@ -1,14 +1,6 @@
 #
-# wm independent hotkeys
+# bspwk environment hotkeys
 #
-
-# terminal emulator
-super + Return
-	urxvt
-
-# program launcher
-super + @space
-	dmenu_run
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -19,12 +11,12 @@ super + Escape
 #
 
 # quit/restart bspwm
-super + alt + {q,r}
-	bspc {quit,wm -r}
+super + shift + r
+	bspc wm -r
 
 # close and kill
-super + {_,shift + }w
-	bspc node -{c,k}
+super + shift + q
+	bspc node -c
 
 # alternate between the tiled and monocle layout
 super + m
@@ -63,16 +55,23 @@ super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous window in the current desktop
-super + {_,shift + }c
+super + {_,shift + }n
 	bspc node -f {next,prev}.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
 
+# focus the next/previous desktop in the current monitor
+super + {less,greater}
+	bspc desktop -f {prev,next}.local
+
 # focus the last node/desktop
-super + {grave,Tab}
-	bspc {node,desktop} -f last
+alt + Tab
+	bspc node -f last
+
+alt + shift + Tab
+	bspc desktop -f last
 
 # focus the older or newer node in the focus history
 super + {o,i}
@@ -109,13 +108,54 @@ super + ctrl + shift + space
 #
 
 # expand a window by moving one of its side outward
-super + alt + {h,j,k,l}
+ctrl + alt + {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
 # contract a window by moving one of its side inward
-super + alt + shift + {h,j,k,l}
+ctrl + alt + shift + {h,j,k,l}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 # move a floating window
-super + {Left,Down,Up,Right}
+ctrl + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+#
+# special keys
+#
+
+XF86MonBrightnessUp
+	brightnessctl set +3%
+
+XF86MonBrightnessDown
+	brightnessctl set 3%-
+
+XF86AudioMute
+	pamixer --toggle-mute
+
+XF86Audio{Lower,Raise}Volume
+	pamixer -{d,i} 5
+
+#XF86Audio{Play,Prev,Next,Stop}
+#	~/.local/bin/mediacontrolkeys.sh {PlayPause,Previous,Next,Stop}
+
+#XF86Sleep
+
+#XF86WakeUp
+
+#
+# applications
+#
+
+# terminal emulator
+super + Return
+	wezterm
+
+# terminal emulater running tmux
+super + shift + Return
+	wezterm start -- tmux
+
+# program launcher
+super + d
+	dmenu_run
+
+#super + Print
