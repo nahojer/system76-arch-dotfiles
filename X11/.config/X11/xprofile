@@ -1,10 +1,15 @@
 #!/bin/sh
 
+# These are the custom commands and programs to run for all window managers.
+
 xrandr --dpi 96
 
-setxkbmap -option ctrl:nocaps &
-
 xset r rate 300 50 &
+
+xset s 300 5 &
+xss-lock -n /usr/lib/xsecurelock/dimmer -l -- xsecurelock &
+
+setxkbmap -option ctrl:nocaps &
 
 autostart="mpd dunst clipmenu pipewire"
 for program in $autostart; do

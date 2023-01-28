@@ -138,9 +138,9 @@ XF86Audio{Lower,Raise}Volume
 #XF86Audio{Play,Prev,Next,Stop}
 #	~/.local/bin/mediacontrolkeys.sh {PlayPause,Previous,Next,Stop}
 
-#XF86Sleep
-
-#XF86WakeUp
+XF86Sleep
+	# https://github.com/google/xsecurelock
+	xset s activate && systemctl suspend -i
 
 #
 # applications
