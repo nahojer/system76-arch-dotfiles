@@ -2,7 +2,11 @@
 
 xrandr --dpi 96
 
-autostart=""
+setxkbmap -option ctrl:nocaps &
+
+xset r rate 300 50 &
+
+autostart="mpd dunst clipmenu pipewire"
 for program in $autostart; do
 	pidof -s "$program" || "program" &
 done >/dev/null 2>&1
