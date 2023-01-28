@@ -1,10 +1,6 @@
 #! /bin/sh
 
-pgrep -x picom > /dev/null || picom --config "$HOME/.config/picom/picom.conf" --experimental-backends --vsync &
-
-pgrep -x sxhkd > /dev/null || sxhkd -c "$HOME/.config/bspwm/sxhkd/sxhkdrc" &
-
-nitrogen --restore &
+$HOME/.config/bspwm/autostart.sh
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
