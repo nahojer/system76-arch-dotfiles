@@ -1,0 +1,8 @@
+#!/bin/sh
+
+xrandr --dpi 96
+
+autostart=""
+for program in $autostart; do
+	pidof -s "$program" || "program" &
+done >/dev/null 2>&1
