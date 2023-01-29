@@ -1,4 +1,5 @@
-theme = "base16_transparent"
+# theme = "catppuccin_latte" # Light theme
+theme = "github_dark"
 
 [editor]
 line-number = "relative"
