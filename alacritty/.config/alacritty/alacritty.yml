@@ -1,15 +1,2 @@
-env:
-  TERM: alacritty
-
-window:
-  opacity: 1.0
-  class:
-    instance: Alacritty
-    general: Alacritty
-
-scrolling:
-  history: 100000
-  multiplier: 3
-
-font:
-  size: 8.0
+import:
+  - ~/.config/alacritty/base.yml

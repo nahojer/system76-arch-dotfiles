@@ -1,0 +1,19 @@
+env:
+  TERM: alacritty
+
+window:
+  padding:
+    x: 5
+    y: 5
+  dynamic_padding: true
+  opacity: 1.0
+  class:
+    instance: Alacritty
+    general: Alacritty
+
+scrolling:
+  history: 100000
+  multiplier: 3
+
+font:
+  size: 7.0
