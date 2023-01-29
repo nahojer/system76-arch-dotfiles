@@ -1,5 +1,5 @@
-# theme = "catppuccin_latte" # Light theme
-theme = "catppuccin_mocha" # Dark theme
+# theme = "rose_pine_dawn" # Light theme
+theme = "rose_pine" # Dark theme
 
 [editor]
 line-number = "relative"
