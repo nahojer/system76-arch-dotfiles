@@ -148,11 +148,11 @@ XF86Sleep
 
 # terminal emulator
 super + Return
-	wezterm
+	alacritty
 
 # terminal emulater running tmux
 super + shift + Return
-	wezterm start -- tmux
+	alacritty -e tmux
 
 # program launcher
 super + d
