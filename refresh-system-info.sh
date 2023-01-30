@@ -23,3 +23,6 @@ systemctl list-unit-files --state=enabled \
   | awk '{print $1}' \
   | awk 'BEGIN{FILTER="\\.(service|timer|socket|path|device|mount|automount|swap|target|snapshot|slice|scope)$"} tolower($NF) ~ FILTER { print $NF }' \
   | format > "$outdir/systemd.txt"
+
+# Globally install NPM packages.
+npm list -g | awk '{print $2}' | format > "$outdir/npm.txt"
