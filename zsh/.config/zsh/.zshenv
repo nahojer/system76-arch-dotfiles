@@ -40,6 +40,7 @@ export GEM_SPEC_CACHE="$XDG_CACHE_HOME/gem"
 export PYLINTHOME="$XDG_CACHE_HOME/pylint"
 #Runtime
 export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
+export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 
 # Conda
 export CONDA_ROOT=/opt/conda
