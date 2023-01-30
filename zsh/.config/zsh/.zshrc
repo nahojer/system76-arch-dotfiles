@@ -168,6 +168,12 @@ alias \
   unlock="sudo rm /var/lib/pacman/db.lck"
 
 ###
+# Work
+###
+
+[[ -f "$ZDOTDIR/.workrc" ]] && . "$ZDOTDIR/.workrc" 
+
+###
 # X11
 ###
 
