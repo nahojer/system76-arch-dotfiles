@@ -153,19 +153,20 @@ alias \
 	cp="cp -i" \
 	mv="mv -i" \
 	rm="rm -I" \
-  ls="exa" \
+	ls="exa" \
 	mkdir="mkdir -p" \
 	vim="vim -i ~/.cache/vim/info" \
-  grep='grep --color=auto' \
-  df='df -h' \
-  tree="tree -aFC --dirsfirst -I .git" \
-  wget="wget -c" \
-  free="free -mt" \
-  psgrep="ps aux | grep -v grep | grep -i -e VSZ -e" \
-  cleanup='sudo pacman -Rns $(pacman -Qtdq)' \
-  zshrc="$EDITOR $ZDOTDIR/.zshrc" \
-  srczsh="source $ZDOTDIR/.zshrc" \
-  unlock="sudo rm /var/lib/pacman/db.lck"
+	grep='grep --color=auto' \
+	df='df -h' \
+	tree="tree -aFC --dirsfirst -I .git" \
+	wget="wget -c" \
+	free="free -mt" \
+	psgrep="ps aux | grep -v grep | grep -i -e VSZ -e" \
+	cleanup='sudo pacman -Rns $(pacman -Qtdq)' \
+	zshrc="$EDITOR $ZDOTDIR/.zshrc" \
+	srczsh="source $ZDOTDIR/.zshrc" \
+	unlock="sudo rm /var/lib/pacman/db.lck" \
+	mirrors="sudo reflector --verbose --latest 10 --country 'Sweden,Finland,Norway,Denmark' --age 6 --sort rate --save /etc/pacman.d/mirrorlist"
 
 ###
 # Work
