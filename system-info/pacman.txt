@@ -84,6 +84,10 @@ system76-firmware-daemon
 texinfo
 tmux
 tree
+ttf-font-awesome
+ttf-inconsolata
+ttf-material-design-icons-desktop-git
+ttf-meslo-nerd-font-powerlevel10k
 vim
 wezterm
 wget
