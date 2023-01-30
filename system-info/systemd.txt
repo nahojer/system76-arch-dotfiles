@@ -1,0 +1,15 @@
+bluetooth.service
+cups.path
+cups.service
+cups.socket
+fstrim.timer
+getty@.service
+NetworkManager-dispatcher.service
+NetworkManager.service
+NetworkManager-wait-online.service
+paccache.timer
+reflector.timer
+remote-fs.target
+sshd.service
+system76-firmware-daemon.service
+system76.service
