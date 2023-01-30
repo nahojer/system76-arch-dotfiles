@@ -49,6 +49,7 @@ export CONDA_PKGS_DIRS=/opt/conda/pkgs
 
 # Vim
 export MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc"
+export VIMINIT="source $MYVIMRC"
 
 # Other program settings:
 export MOZ_USE_XINPUT2="1" # Mozilla smooth scrolling/touchpads.
