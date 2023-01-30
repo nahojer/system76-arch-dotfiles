@@ -92,6 +92,7 @@ wireplumber
 wireplumber-docs
 xclip
 xdg-desktop-portal
+xdg-ninja
 xorg-bdftopcf
 xorg-iceauth
 xorg-mkfontscale
