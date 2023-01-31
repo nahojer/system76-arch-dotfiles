@@ -32,6 +32,7 @@ gawk
 gcc
 gettext
 git
+gopls
 grep
 groff
 grub
@@ -74,7 +75,8 @@ rust-analyzer
 rustup
 rxvt-unicode
 sed
-slack
+slack-desktop
+spotify-launcher
 stow
 sudo
 sxhkd
@@ -89,6 +91,7 @@ ttf-inconsolata
 ttf-material-design-icons-desktop-git
 ttf-meslo-nerd-font-powerlevel10k
 vim
+visual-studio-code-bin
 wezterm
 wget
 which
@@ -97,6 +100,8 @@ wireplumber-docs
 xclip
 xdg-desktop-portal
 xdg-ninja
+xkblayout
+xkb-switch
 xorg-bdftopcf
 xorg-iceauth
 xorg-mkfontscale
