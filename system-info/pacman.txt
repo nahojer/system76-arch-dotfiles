@@ -41,6 +41,8 @@ helix-git
 inetutils
 intel-ucode
 iwd
+kubectl
+kustomize
 libtool
 linux
 linux-firmware
