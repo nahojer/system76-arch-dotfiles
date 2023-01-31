@@ -1,0 +1,5 @@
+[user]
+	email = johan.ronkko@zimpler.com
+	name = Johan Rönkkö
+[url "ssh://git@gitlab.zimpler.com"]
+	insteadOf = https://gitlab.zimpler.com
