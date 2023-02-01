@@ -1,13 +1,8 @@
 #! /bin/sh
 $HOME/.config/bspwm/autostart.sh
 
-IFS=" " read -r primaryMonitor secondaryMonitor <<< $(monitors)
-
-bspc monitor ${primaryMonitor} -n "$name" -d '1' '2' '3' '4' '5' '6'
-
-if [[ "$secondaryMonitor" != "" ]]; then
-	bspc monitor ${secondaryMonitor} -d '7' '8' '9' '0'
-fi
+bspc monitor "%$(primarymonitor)" -d 1 2 3 4 5 6
+[[ "$(secondarymonitor)" != "" ]] && bspc monitor "%$(secondarymonitor)" -d 7 8 9 0
 
 # Global Settings
 bspc config gapless_monocle false

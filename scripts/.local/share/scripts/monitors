@@ -1,6 +1,0 @@
-#!/bin/bash
-
-primary=$(xrandr -q | grep "connected primary" | awk '{print $1}')
-secondary=$(xrandr -q | grep "connected" | grep -v "primary\|disconnected" | awk '{print $1}' | sort | head -n 1)
-
-echo "$primary $secondary"
