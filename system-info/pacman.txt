@@ -26,9 +26,11 @@ fakeroot
 file
 findutils
 firefox
+flameshot
 flex
 fzf
 gawk
+gcalcli
 gcc
 gettext
 git
