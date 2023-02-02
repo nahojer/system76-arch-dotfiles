@@ -19,6 +19,7 @@
 	fuckit = !"bash -c 'git reset HEAD --hard ; git clean -f'"
 [credential]
 	helper = store
+	helper = manager
 [push]
 	autoSetupRemote = true
 [pull]
@@ -30,3 +31,5 @@
 
 [includeIf "gitdir:~/Work/"]
 	path = ~/.config/git/config-work
+[url "git@gitlab.zimpler.com:"]
+	insteadOf = https://gitlab.zimpler.com/
