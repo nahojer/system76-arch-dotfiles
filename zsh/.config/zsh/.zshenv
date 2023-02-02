@@ -44,6 +44,7 @@ export PYLINTHOME="$XDG_CACHE_HOME/pylint"
 #Runtime
 export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
 export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 # Conda
 export CONDA_ROOT=/opt/conda
