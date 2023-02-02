@@ -95,6 +95,7 @@ ttf-font-awesome
 ttf-inconsolata
 ttf-material-design-icons-desktop-git
 ttf-meslo-nerd-font-powerlevel10k
+unzip
 vim
 visual-studio-code-bin
 wezterm
