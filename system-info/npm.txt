@@ -1,2 +1,5 @@
 corepack@0.15.2
+eslint@8.33.0
 npm@8.19.3
+prettier@2.8.3
+yarn@1.22.19

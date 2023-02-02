@@ -64,6 +64,7 @@ pacman
 pacman-contrib
 pamixer
 patch
+pavucontrol
 picom
 pipewire
 pipewire-alsa
