@@ -94,8 +94,6 @@ function zsh_add_plugin() {
     fi
 }
 
-
-
 zsh_add_plugin "agkozak/zsh-z"
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
@@ -147,6 +145,16 @@ mkcd () {
   mkdir -p $1 && cd $1
 }
 
+fzcd() {
+	dir="$(rg --hidden --files --null -g '!.git' $HOME/.dotfiles $HOME/Work $HOME/Downloads $HOME/Documents $HOME/Pictures $HOME/.local/share/scripts | xargs -0 dirname | sort | uniq | fzf)"
+	cd "$dir"
+}
+
+fze() {
+	filename="$(rg --hidden --files -g '!.git' $HOME/.dotfiles $HOME/Work $HOME/Downloads $HOME/Documents $HOME/Pictures $HOME/.local/share/scripts | sort | uniq | fzf)"
+	$EDITOR "$filename"
+}
+
 ###
 # Alias
 ###
@@ -170,8 +178,9 @@ alias \
 	unlock="sudo rm /var/lib/pacman/db.lck" \
 	mirrors="sudo reflector --verbose --latest 10 --country 'Sweden,Finland,Norway,Denmark,US' --age 6 --sort rate --save /etc/pacman.d/mirrorlist"
 
-###
-# Work
+
+### 
+# Functions
 ###
 
 [[ -f "$ZDOTDIR/.workrc" ]] && . "$ZDOTDIR/.workrc" 
