@@ -56,6 +56,7 @@ man-db
 modemmanager
 mpd
 mtools
+mullvad-vpn-bin
 neofetch
 networkmanager
 network-manager-applet
@@ -75,6 +76,7 @@ pipewire-pulse
 pkgconf
 polybar
 python-pip
+qutebrowser
 reflector
 rofi
 rust-analyzer
@@ -97,6 +99,7 @@ ttf-inconsolata
 ttf-material-design-icons-desktop-git
 ttf-meslo-nerd-font-powerlevel10k
 unzip
+vifm
 vim
 visual-studio-code-bin
 wezterm
