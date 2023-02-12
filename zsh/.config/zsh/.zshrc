@@ -176,7 +176,8 @@ alias \
 	zshrc="$EDITOR $ZDOTDIR/.zshrc" \
 	srczsh="source $ZDOTDIR/.zshrc" \
 	unlock="sudo rm /var/lib/pacman/db.lck" \
-	mirrors="sudo reflector --verbose --latest 10 --country 'Sweden,Finland,Norway,Denmark,US' --age 6 --sort rate --save /etc/pacman.d/mirrorlist"
+	mirrors="sudo reflector --verbose --latest 10 --country 'Sweden,Finland,Norway,Denmark,US' --age 6 --sort rate --save /etc/pacman.d/mirrorlist" \
+	yarn="yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config"
 
 
 ### 
