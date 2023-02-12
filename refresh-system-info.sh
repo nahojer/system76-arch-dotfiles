@@ -24,5 +24,8 @@ systemctl list-unit-files --state=enabled \
   | awk 'BEGIN{FILTER="\\.(service|timer|socket|path|device|mount|automount|swap|target|snapshot|slice|scope)$"} tolower($NF) ~ FILTER { print $NF }' \
   | format > "$outdir/systemd.txt"
 
-# Globally install NPM packages.
+# Globally installed NPM packages.
 npm list -g | awk '{print $2}' | format > "$outdir/npm.txt"
+
+# Globally installed Go packages.
+ls $GOPATH/bin | awk '{print $1}' | format > "$outdir/go.txt"
