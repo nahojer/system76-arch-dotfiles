@@ -11,7 +11,9 @@ bluez
 bluez-utils
 brightnessctl
 bspwm
+clang
 clipmenu
+cmake
 cmatrix
 cups
 dbmate
@@ -49,6 +51,8 @@ kustomize
 libtool
 linux
 linux-firmware
+lld
+llvm
 lshw
 m4
 make
@@ -151,4 +155,5 @@ xsecurelock
 xss-lock
 yaml-language-server
 yay
+zig
 zsh
