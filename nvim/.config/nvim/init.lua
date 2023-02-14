@@ -4,18 +4,35 @@
 require "j.globals"
 
 local has_packer, packer = pcall(require, 'j.packer')
-if has_packer and packer.is_bootstrap then
+if has_packer then
   -- When we are bootstrapping a configuration, it doesn't
   -- make sense to execute the rest of init.lua.
   --
   -- Restart nvim for it to work.
-  print '=================================='
-  print '    Plugins are being installed'
-  print '    Wait until Packer completes,'
-  print '       then restart nvim'
-  print '=================================='
+  if packer.is_bootstrap then
+    print '=================================='
+    print '    Plugins are being installed'
+    print '    Wait until Packer completes,'
+    print '       then restart nvim'
+    print '=================================='
+  end
 end
 
+-- Automatically source and re-compile packer whenever you save this init.lua files.
+local packer_group = vim.api.nvim_create_augroup('Packer', { clear = true })
+vim.api.nvim_create_autocmd('BufWritePost', {
+  command = 'source <afile> | silent! LspStop | silent! LspStart | PackerCompile',
+  group = packer_group,
+  pattern = vim.fn.expand '$MYVIMRC',
+})
+
+-- Setup plugins.
+local has_plugins, plugins = pcall(require, 'j.plugins')
+if has_plugins then
+  plugins.setup()
+end
+
+-- Configure options.
 vim.o.hlsearch = false
 vim.wo.number = true
 vim.wo.relativenumber = true
@@ -25,7 +42,7 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.updatetime = 250
 vim.wo.signcolumn = 'yes'
-vim.o.termguicolors = false
+vim.o.termguicolors = true
 vim.o.completeopt = 'menuone,noselect' -- Set completeopt to have a better completion experience
 
 -- [[ Highlight on yank ]]
