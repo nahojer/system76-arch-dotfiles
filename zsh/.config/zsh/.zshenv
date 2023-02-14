@@ -5,11 +5,11 @@
 unsetopt PROMPT_SP
 
 # Default programs:
-export EDITOR="hx"
-export VISUAL="hx"
-export TERMINAL="wezterm"
+export EDITOR="nvim"
+export VISUAL="nvim"
+export TERMINAL="alacritty"
 export BROWSER="firefox"
-export CM_LAUNCHER="rofi"
+export CM_LAUNCHER="dmenu"
 
 # $HOME cleanup:
 #Config
@@ -51,12 +51,11 @@ export CONDA_ROOT=/opt/conda
 export CONDA_ENVS_PATH=/opt/conda/envs
 export CONDA_PKGS_DIRS=/opt/conda/pkgs
 
-# Vim
-export MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc"
-export VIMINIT="source $MYVIMRC"
-
 # Other program settings:
 export MOZ_USE_XINPUT2="1" # Mozilla smooth scrolling/touchpads.
+
+# Rust
+[[ -f "$HOME/.local/share/cargo/env" ]] && . "$HOME/.local/share/cargo/env"
 
 # PATH:
 export PATH="$PATH:${$(find $HOME/.local/bin -type d -printf %p:)%%:}" # Adds `~/.local/bin` to $PATH
@@ -66,6 +65,4 @@ export PATH="$PATH:${XDG_DATA_HOME:-$HOME/.local/share}/cargo/bin"
 export PATH="$PATH:${XDG_DATA_HOME:-$HOME/.local/share}/scripts"
 export PATH="$PATH:$HOME/.local/bin"
 
-# Rust
-[[ -f "$HOME/.local/share/cargo/env" ]] && . "$HOME/.local/share/cargo/env"
 
