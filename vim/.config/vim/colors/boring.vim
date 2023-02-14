@@ -1,6 +1,8 @@
 hi clear
 let g:colors_name = 'boring'
 
+" Checkout https://materialui.co/flatuicolors
+
 let s:t_Co = exists('&t_Co') && !has('gui_running') ? (&t_Co ?? 0) : -1
 
 hi! link Terminal Normal
@@ -49,7 +51,7 @@ if &background ==# 'dark'
   hi CursorLineNr guifg=#dadada guibg=#303031 gui=NONE cterm=NONE
   hi DiffAdd guifg=#00af00 guibg=#080808 gui=reverse cterm=reverse
   hi DiffChange guifg=#87afd7 guibg=#080808 gui=reverse cterm=reverse
-  hi DiffDelete guifg=#d75f5f guibg=#080808 gui=reverse cterm=reverse
+  hi DiffDelete guifg=#E74C3C guibg=#080808 gui=reverse cterm=reverse
   hi DiffText guifg=#d787d7 guibg=#080808 gui=reverse cterm=reverse
   hi Directory guifg=#dadada guibg=NONE gui=NONE cterm=NONE
   hi EndOfBuffer guifg=#dadada guibg=NONE gui=NONE cterm=NONE
@@ -112,9 +114,9 @@ else
   hi CursorColumn guifg=NONE guibg=#eeeeee gui=NONE cterm=NONE
   hi CursorLine guifg=NONE guibg=#eeeeee gui=NONE cterm=NONE
   hi CursorLineNr guifg=#080808 guibg=#eeeeee gui=NONE cterm=NONE
-  hi DiffAdd guifg=#2ECC71 guibg=#080808 gui=reverse cterm=reverse
-  hi DiffChange guifg=#afafd7 guibg=#080808 gui=reverse cterm=reverse
-  hi DiffDelete guifg=#d78787 guibg=#080808 gui=reverse cterm=reverse
+  hi DiffAdd guifg=#d7d7d7 guibg=#16A34A gui=reverse cterm=reverse
+  hi DiffChange guifg=#d7d7d7 guibg=#475569 gui=reverse cterm=reverse
+  hi DiffDelete guifg=#d7d7d7 guibg=#DC2626 gui=reverse cterm=reverse
   hi DiffText guifg=#d787d7 guibg=#080808 gui=reverse cterm=reverse
   hi Directory guifg=#080808 guibg=NONE gui=NONE cterm=NONE
   hi EndOfBuffer guifg=#080808 guibg=NONE gui=NONE cterm=NONE
@@ -640,7 +642,7 @@ endif
 " Color: dark13        #ff87ff           213               magenta
 " Color: dark14        #00d7d7           44                cyan
 " Color: dark15        #ffffff           231               white
-" Color: diffred       #d75f5f           167               darkred
+" Color: diffred       #E74C3C           167               darkred
 " Color: diffgreen     #00af00           34                darkgreen
 " Color: diffblue      #87afd7           110               darkblue
 " Color: diffpink      #d787d7           176               darkmagenta
