@@ -197,3 +197,20 @@ lockscreen() {
 
 # Start window manager when logging into tty1.
 [[ "$(tty)" = "/dev/tty1" ]] && ! pidof -s Xorg >/dev/null 2>&1 && exec startx "$XINITRC" > "$XDG_DATA_HOME/xorg/startx_$(date +'%d-%m-%Y_%s').log" 2>&1
+
+###
+# FZF
+###
+#
+if [[ ! "$PATH" == */home/j/.dotfiles/vim/.config/vim/plugged/fzf/bin* ]]; then
+  PATH="${PATH:+${PATH}:}/home/j/.dotfiles/vim/.config/vim/plugged/fzf/bin"
+fi
+
+# Auto-completion
+# ---------------
+[[ $- == *i* ]] && source "/home/j/.dotfiles/vim/.config/vim/plugged/fzf/shell/completion.zsh" 2> /dev/null
+
+# Key bindings
+# ------------
+source "/home/j/.dotfiles/vim/.config/vim/plugged/fzf/shell/key-bindings.zsh"
+
