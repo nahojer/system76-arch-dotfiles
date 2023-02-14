@@ -5,12 +5,14 @@ let &runtimepath.=','.rtp.',~/.config/vim/after'
 set undodir=~/.config/vim/undo//,.
 
 """"""""""""""""""""""
-"      Settings      "
+" Plugins
 """"""""""""""""""""""
 if empty(glob('~/.config/vim/autoload/plug.vim'))
 		silent !curl -fLo ~/.config/vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
+
+" Checkout https://github.com/airblade/vim-rooter
 
 call plug#begin('~/.config/vim/plugged')
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -28,7 +30,7 @@ Plug 'ap/vim-css-color'
 call plug#end()	
 
 """"""""""""""""""""""
-"      Settings      "
+" Settings
 """"""""""""""""""""""
 set nocompatible                " Enables us Vim specific features
 filetype off                    " Reset filetype detection first ...
@@ -107,7 +109,7 @@ if !exists("g:syntax_on")
     syntax enable
 endif
 set background=light
-colorscheme boring
+colorscheme molokai
 
 """"""""""""""""""""""
 "      Mappings      "
@@ -193,8 +195,14 @@ let g:go_highlight_generate_tags = 1
 augroup go
   autocmd!
 
-  " Show by default 4 spaces for a tab
   autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
+
+	autocmd FileType go nnoremap <silent> gd :GoDef<CR>
+	autocmd FileType go nnoremap <silent> gD :GoDecls<CR>
+	autocmd FileType go nnoremap <silent> gT :GoDefType<CR>
+	autocmd FileType go nnoremap <silent> gr :GoReferrers<CR>
+	autocmd FileType go nnoremap <silent> <leader>r :GoRename<CR>
+	" GoCallers, GoFillStruct, GoAddTags, GoRemoveTags
 
 augroup END
 
@@ -230,6 +238,7 @@ let g:fzf_action = {
 
 " CTRL-T / CTRL-X / CTRL-V key bindings to open in a new tab, a new split, or in a new vertical split
 nnoremap <silent> <Leader>fs :Snippets<CR>
+nnoremap <silent> <Leader>ft :Rg<CR>
 nnoremap <silent> <Leader>fb :Buffers<CR>
 nnoremap <silent> <Leader>ff :Files<CR>
 nnoremap <silent> <Leader>fm :Marks<CR>
