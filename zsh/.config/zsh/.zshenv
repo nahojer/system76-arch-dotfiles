@@ -54,6 +54,10 @@ export CONDA_PKGS_DIRS=/opt/conda/pkgs
 # Other program settings:
 export MOZ_USE_XINPUT2="1" # Mozilla smooth scrolling/touchpads.
 
+# Vim
+export MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc"
+export VIMINIT="source $MYVIMRC"
+
 # Rust
 [[ -f "$HOME/.local/share/cargo/env" ]] && . "$HOME/.local/share/cargo/env"
 
