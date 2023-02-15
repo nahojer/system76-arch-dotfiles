@@ -91,6 +91,7 @@ rxvt-unicode
 sed
 slack-desktop
 spotify-launcher
+st
 stow
 sudo
 sxhkd

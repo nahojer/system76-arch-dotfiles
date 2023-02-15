@@ -41,8 +41,8 @@ fi
 session=${1:-bspwm}
 
 case $session in
-    i3|i3wn        ) exec i3;;
     bspwm          ) exec bspwm;;
+    dwm            ) exec dwm;;
     # no known session, try to run it as a command
     *              ) exec $1;;
 esac

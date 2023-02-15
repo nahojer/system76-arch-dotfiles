@@ -187,18 +187,6 @@ alias \
 [[ -f "$ZDOTDIR/.workrc" ]] && . "$ZDOTDIR/.workrc" 
 
 ###
-# X11
-###
-
-lockscreen() {
-	# https://github.com/google/xsecurelock
-	xset s activate
-}
-
-# Start window manager when logging into tty1.
-[[ "$(tty)" = "/dev/tty1" ]] && ! pidof -s Xorg >/dev/null 2>&1 && exec startx "$XINITRC" > "$XDG_DATA_HOME/xorg/startx_$(date +'%d-%m-%Y_%s').log" 2>&1
-
-###
 # FZF
 ###
 #
@@ -214,3 +202,17 @@ fi
 # ------------
 source "/home/j/.dotfiles/vim/.config/vim/plugged/fzf/shell/key-bindings.zsh"
 
+###
+# X11
+###
+
+export WINDOW_MANAGER="bspwm"
+
+lockscreen() {
+	# https://github.com/google/xsecurelock
+	xset s activate
+}
+
+# Start window manager when logging into tty1.
+# Needs to be the last thing in the .zshrc.
+#[[ "$(tty)" = "/dev/tty1" ]] && ! pidof -s Xorg >/dev/null 2>&1 && exec startx "$XINITRC" "$WINDOW_MANAGER"
