@@ -39,6 +39,7 @@ gettext
 git
 gnu-netcat
 gopls
+go-task
 grep
 groff
 grub
