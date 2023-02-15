@@ -32,8 +32,29 @@ separator = "│"
 # render = true
 
 [keys.normal]
+up = "no_op"
+down = "no_op"
+left = "no_op"
+right = "no_op"
+pageup = "no_op"
+pagedown = "no_op"
+home = "no_op"
+end = "no_op"
 '{' = ["goto_prev_paragraph", "collapse_selection", "move_line_up"]
 '}' = ["goto_next_paragraph", "collapse_selection"]
 'C-u' = ["page_up", "align_view_center"]
 'C-d' = ["page_down", "align_view_center"]
-'A-w' = ':write'
+'A-w' = ":write"
+'A-y' = ['extend_to_line_bounds', 'trim_selections', 'yank'] # Copy line with one leading whitesapce and all trailing whitespace removed.
+# Do gll<insert mode + ' '><normal_mode>Y to paste next to current line
+
+[keys.insert]
+up = "no_op"
+down = "no_op"
+left = "no_op"
+right = "no_op"
+pageup = "no_op"
+pagedown = "no_op"
+home = "no_op"
+end = "no_op"
+'A-w' = ["normal_mode", ":write"]
