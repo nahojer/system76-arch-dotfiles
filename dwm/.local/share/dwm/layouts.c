@@ -1,50 +1,22 @@
-/* Layouts (delete the ones you do not need) */
 static void fibonacci(Monitor *m, int s);
 static void spiral(Monitor *m);
-/* Internals */
 static void getgaps(Monitor *m, int *oh, int *ov, int *ih, int *iv, unsigned int *nc);
-static void setgaps(int oh, int ov, int ih, int iv);
+static void togglegaps(const Arg *arg);
 
-/* Settings */
-#if !PERTAG_PATCH
 static int enablegaps = 1;
-#endif // PERTAG_PATCH
 
 void
-setgaps(int oh, int ov, int ih, int iv)
+togglegaps(const Arg *arg)
 {
-	if (oh < 0) oh = 0;
-	if (ov < 0) ov = 0;
-	if (ih < 0) ih = 0;
-	if (iv < 0) iv = 0;
-
-	selmon->gappoh = oh;
-	selmon->gappov = ov;
-	selmon->gappih = ih;
-	selmon->gappiv = iv;
-	arrange(selmon);
-}
-
-void
-incrgaps(const Arg *arg)
-{
-	setgaps(
-		selmon->gappoh + arg->i,
-		selmon->gappov + arg->i,
-		selmon->gappih + arg->i,
-		selmon->gappiv + arg->i
-	);
+	enablegaps = !enablegaps;
+	arrange(NULL);
 }
 
 void
 getgaps(Monitor *m, int *oh, int *ov, int *ih, int *iv, unsigned int *nc)
 {
 	unsigned int n, oe, ie;
-	#if PERTAG_PATCH
-	oe = ie = selmon->pertag->enablegaps[selmon->pertag->curtag];
-	#else
 	oe = ie = enablegaps;
-	#endif // PERTAG_PATCH
 	Client *c;
 
 	for (n = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), n++);
