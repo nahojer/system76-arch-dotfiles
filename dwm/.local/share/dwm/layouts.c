@@ -1,20 +1,8 @@
-/* Key binding functions */
-static void defaultgaps(const Arg *arg);
-static void incrgaps(const Arg *arg);
-static void incrigaps(const Arg *arg);
-static void incrogaps(const Arg *arg);
-static void incrohgaps(const Arg *arg);
-static void incrovgaps(const Arg *arg);
-static void incrihgaps(const Arg *arg);
-static void incrivgaps(const Arg *arg);
-static void togglegaps(const Arg *arg);
 /* Layouts (delete the ones you do not need) */
 static void fibonacci(Monitor *m, int s);
 static void spiral(Monitor *m);
-static void tile(Monitor *m);
 /* Internals */
 static void getgaps(Monitor *m, int *oh, int *ov, int *ih, int *iv, unsigned int *nc);
-static void getfacts(Monitor *m, int msize, int ssize, float *mf, float *sf, int *mr, int *sr);
 static void setgaps(int oh, int ov, int ih, int iv);
 
 /* Settings */
@@ -38,95 +26,12 @@ setgaps(int oh, int ov, int ih, int iv)
 }
 
 void
-togglegaps(const Arg *arg)
-{
-	#if PERTAG_PATCH
-	selmon->pertag->enablegaps[selmon->pertag->curtag] = !selmon->pertag->enablegaps[selmon->pertag->curtag];
-	#else
-	enablegaps = !enablegaps;
-	#endif // PERTAG_PATCH
-	arrange(NULL);
-}
-
-void
-defaultgaps(const Arg *arg)
-{
-	setgaps(gappoh, gappov, gappih, gappiv);
-}
-
-void
 incrgaps(const Arg *arg)
 {
 	setgaps(
 		selmon->gappoh + arg->i,
 		selmon->gappov + arg->i,
 		selmon->gappih + arg->i,
-		selmon->gappiv + arg->i
-	);
-}
-
-void
-incrigaps(const Arg *arg)
-{
-	setgaps(
-		selmon->gappoh,
-		selmon->gappov,
-		selmon->gappih + arg->i,
-		selmon->gappiv + arg->i
-	);
-}
-
-void
-incrogaps(const Arg *arg)
-{
-	setgaps(
-		selmon->gappoh + arg->i,
-		selmon->gappov + arg->i,
-		selmon->gappih,
-		selmon->gappiv
-	);
-}
-
-void
-incrohgaps(const Arg *arg)
-{
-	setgaps(
-		selmon->gappoh + arg->i,
-		selmon->gappov,
-		selmon->gappih,
-		selmon->gappiv
-	);
-}
-
-void
-incrovgaps(const Arg *arg)
-{
-	setgaps(
-		selmon->gappoh,
-		selmon->gappov + arg->i,
-		selmon->gappih,
-		selmon->gappiv
-	);
-}
-
-void
-incrihgaps(const Arg *arg)
-{
-	setgaps(
-		selmon->gappoh,
-		selmon->gappov,
-		selmon->gappih + arg->i,
-		selmon->gappiv
-	);
-}
-
-void
-incrivgaps(const Arg *arg)
-{
-	setgaps(
-		selmon->gappoh,
-		selmon->gappov,
-		selmon->gappih,
 		selmon->gappiv + arg->i
 	);
 }
@@ -152,32 +57,6 @@ getgaps(Monitor *m, int *oh, int *ov, int *ih, int *iv, unsigned int *nc)
 	*ih = m->gappih*ie; // inner horizontal gap
 	*iv = m->gappiv*ie; // inner vertical gap
 	*nc = n;            // number of clients
-}
-
-void
-getfacts(Monitor *m, int msize, int ssize, float *mf, float *sf, int *mr, int *sr)
-{
-	unsigned int n;
-	float mfacts = 0, sfacts = 0;
-	int mtotal = 0, stotal = 0;
-	Client *c;
-
-	for (n = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), n++)
-		if (n < m->nmaster)
-			mfacts += c->cfact;
-		else
-			sfacts += c->cfact;
-
-	for (n = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), n++)
-		if (n < m->nmaster)
-			mtotal += msize * (c->cfact / mfacts);
-		else
-			stotal += ssize * (c->cfact / sfacts);
-
-	*mf = mfacts; // total factor of master area
-	*sf = sfacts; // total factor of stack area
-	*mr = msize - mtotal; // the remainder (rest) of pixels after a cfacts master split
-	*sr = ssize - stotal; // the remainder (rest) of pixels after a cfacts stack split
 }
 
 /*
