@@ -14,4 +14,8 @@ return require('lazy').setup {
   'jay-babu/mason-null-ls.nvim',
   'neovim/nvim-lspconfig',
   { 'jose-elias-alvarez/null-ls.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
+
+  -- Search / Navigation
+  { 'nvim-telescope/telescope.nvim', requires = { { 'nvim-lua/popup.nvim' }, { 'nvim-lua/plenary.nvim' } } },
+  { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
 }
