@@ -64,6 +64,7 @@ mpd
 mtools
 mullvad-vpn-bin
 neofetch
+neovim
 networkmanager
 network-manager-applet
 nitrogen
