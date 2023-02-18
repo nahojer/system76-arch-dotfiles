@@ -95,3 +95,5 @@ o.formatoptions = vim.opt.formatoptions
   - '2' -- I'm not in gradeschool anymore
 
 vim.cmd 'language en_US.utf8'
+
+vim.g['better_whitespace_guicolor'] = '#e0def4'
