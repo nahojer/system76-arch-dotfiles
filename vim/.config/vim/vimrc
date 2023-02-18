@@ -15,8 +15,6 @@ endif
 " Checkout https://github.com/airblade/vim-rooter
 
 call plug#begin('~/.config/vim/plugged')
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'SirVer/ultisnips'
 Plug 'fatih/molokai'
 Plug 'romainl/vim-qf'
 let g:fzf_install = 'yes | ./install'
@@ -131,80 +129,6 @@ nmap <Leader>q <Plug>(qf_qf_toggle)
 nmap [q <Plug>(qf_qf_previous)zz
 " Go to next location
 nmap ]q <Plug>(qf_qf_next)zz
-
-"""""""""""""""""""""
-" Go			      
-"""""""""""""""""""""
-" Snippets (insert mode + <snippet> + <tab>):
-" anon 		-- anonymous function
-" : 			-- shorthand variable declaration
-" ap 			-- append
-" ap= 		-- append assignment
-" def			-- defer 
-" defr		-- defer recover
-" if 			-- if condition
-" else 		-- else snippet
-" ife			-- if inline error
-" errn 		-- error snippet
-" errl		-- error log snippet
-" errt 		-- error test
-" errh 		-- error handle
-" for			-- for loop
-" fori		-- for integer loop
-" forr		-- for range loop
-" func 		-- function
-" ff 			-- Fmt Printf debug
-" fn 			-- Fmt Println debug
-" fe			-- Fmt Errorf debug
-" few			-- Fmt Errorf wrap
-" errnfw  -- Fmt Errorf wrap and return (favorite)
-" ok 			-- ok
-" st			-- struct
-" switch 	-- switch
-" tswitch -- type switch
-" sp			-- sprintf
-" go 			-- goroutine named function
-" gof 		-- goroutine anonymous function
-" test 		-- test function
-" tr 			-- test t.Run
-" tt			-- test table snippet
-" hf 			-- HTTP handler func
-" ter			-- test error handling
-" terf 		-- test fatal error
-" con			-- constant
-" cons		-- constants block
-" vars		-- vars block
-
-let g:go_fmt_command = "goimports"
-let g:go_autodetect_gopath = 1
-let g:go_list_type = "quickfix"
-let g:go_metalinter_autosave = 1
-let g:go_metalinter_deadline = '20s'
-let g:go_test_timeout = '10s'
-
-let g:go_highlight_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_function_calls = 1
-let g:go_highlight_extra_types = 1
-let g:go_highlight_generate_tags = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-let g:go_highlight_generate_tags = 1
-
-augroup go
-  autocmd!
-
-  autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
-
-	autocmd FileType go nnoremap <silent> gd :GoDef<CR>
-	autocmd FileType go nnoremap <silent> gD :GoDecls<CR>
-	autocmd FileType go nnoremap <silent> gT :GoDefType<CR>
-	autocmd FileType go nnoremap <silent> gr :GoReferrers<CR>
-	autocmd FileType go nnoremap <silent> <leader>r :GoRename<CR>
-	" GoCallers, GoFillStruct, GoAddTags, GoRemoveTags
-
-augroup END
 
 """""""""""""""""""""
 " Fzf
