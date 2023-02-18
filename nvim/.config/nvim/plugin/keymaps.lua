@@ -2,7 +2,6 @@ local gmap = require('nahojer.keymap').gmap
 local nmap = require('nahojer.keymap').nmap
 local vmap = require('nahojer.keymap').vmap
 local imap = require('nahojer.keymap').imap
-local cmap = require('nahojer.keymap').cmap
 
 local function opts(desc)
   return { silent = true, desc = desc }
@@ -58,6 +57,9 @@ imap { ' ', ' <c-g>u', opts() }
 -- stay in indent mode.
 vmap { '<', '<gv', opts() }
 vmap { '>', '>gv', opts() }
+
+nmap { '<leader>e', '<cmd>:Lexplore<CR>', opts 'Explorer' }
+nmap { '<leader>E', '<cmd>:Lexplore %:p:h<CR>', opts 'Explorer (cwd)' }
 
 -- https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
 vim.cmd [[

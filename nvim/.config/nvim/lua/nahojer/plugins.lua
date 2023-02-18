@@ -4,7 +4,7 @@ return require('lazy').setup {
   'tpope/vim-surround',
 
   -- Theme and styling
-  { 'rose-pine/neovim',                name = 'rose-pine', lazy = false, priority = 1000 },
+  { 'rose-pine/neovim', name = 'rose-pine', lazy = false, priority = 1000 },
   'nvim-lualine/lualine.nvim',
   'kyazdani42/nvim-web-devicons', -- note: requires patched fonts
 
@@ -20,9 +20,9 @@ return require('lazy').setup {
   'williamboman/mason-lspconfig.nvim',
   'jay-babu/mason-null-ls.nvim',
   'neovim/nvim-lspconfig',
-  { 'jose-elias-alvarez/null-ls.nvim',          dependencies = { 'nvim-lua/plenary.nvim' } },
+  { 'jose-elias-alvarez/null-ls.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
 
   -- Search / Navigation
-  { 'nvim-telescope/telescope.nvim',            requires = { { 'nvim-lua/popup.nvim' }, { 'nvim-lua/plenary.nvim' } } },
+  { 'nvim-telescope/telescope.nvim', requires = { { 'nvim-lua/popup.nvim' }, { 'nvim-lua/plenary.nvim' } } },
   { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
 }

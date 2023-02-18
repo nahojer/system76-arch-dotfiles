@@ -83,17 +83,11 @@ o.completeopt = {
 }
 o.shortmess:append 'c' -- don't show redundant messages from ins-completion-menu
 
-o.formatoptions = vim.opt.formatoptions
-  - 'a' -- Auto formatting is BAD.
-  - 't' -- Don't auto format my code. I got linters for that.
-  + 'c' -- In general, I like it when comments respect textwidth
-  + 'q' -- Allow formatting comments w/ gq
-  - 'o' -- O and o, don't continue comments
-  + 'r' -- But do continue when pressing enter.
-  + 'n' -- Indent past the formatlistpat, not underneath it.
-  + 'j' -- Auto-remove comments if possible.
-  - '2' -- I'm not in gradeschool anymore
-
 vim.cmd 'language en_US.utf8'
+
+-- file explorer
+vim.g.netrw_keepdir = 0
+vim.g.netrw_winsize = 15
+vim.g.netrw_banner = 0
 
 vim.g['better_whitespace_guicolor'] = '#e0def4'
