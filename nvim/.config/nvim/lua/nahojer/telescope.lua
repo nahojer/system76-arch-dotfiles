@@ -21,7 +21,7 @@ M.buffers = function()
 end
 
 M.live_grep = function()
-  require('telescope.builtin').git_files(require('telescope.themes').get_ivy {})
+  require('telescope.builtin').live_grep(require('telescope.themes').get_ivy {})
 end
 
 M.current_buffer_fuzzy_find = function()
