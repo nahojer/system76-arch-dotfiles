@@ -15,6 +15,13 @@ cmp.setup {
       },
       { 'i', 'c' }
     ),
+    ['<tab>'] = cmp.mapping(
+      cmp.mapping.confirm {
+        behavior = cmp.ConfirmBehavior.Replace,
+        select = false,
+      },
+      { 'i', 'c' }
+    ),
     ['<enter>'] = cmp.mapping(
       cmp.mapping.confirm {
         behavior = cmp.ConfirmBehavior.Replace,
@@ -22,7 +29,6 @@ cmp.setup {
       },
       { 'i', 'c' }
     ),
-    ['<tab>'] = cmp.config.disable,
   },
   sources = {
     { name = 'nvim_lsp' },
