@@ -23,7 +23,18 @@ return require('lazy').setup {
   'neovim/nvim-lspconfig',
   { 'jose-elias-alvarez/null-ls.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
 
+  -- Snippets
+  'L3MON4D3/LuaSnip', -- note: required by cmp
+
+  -- Completion
+  'hrsh7th/nvim-cmp', -- auto completion
+  'hrsh7th/cmp-buffer', -- source buffers
+  'hrsh7th/cmp-path', -- source path
+  'hrsh7th/cmp-nvim-lua', -- source nvim lua
+  'hrsh7th/cmp-nvim-lsp', -- source nvim lsp
+  'onsails/lspkind-nvim', -- fancy icons for completion
+
   -- Search / Navigation
-  { 'nvim-telescope/telescope.nvim', requires = { { 'nvim-lua/popup.nvim' }, { 'nvim-lua/plenary.nvim' } } },
+  { 'nvim-telescope/telescope.nvim', dependencies = { 'nvim-lua/popup.nvim', 'nvim-lua/plenary.nvim' } },
   { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
 }
