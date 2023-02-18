@@ -1,4 +1,7 @@
 return require('lazy').setup {
+  -- Core
+  'tpope/vim-commentary',
+
   -- Theme and styling
   { 'rose-pine/neovim', name = 'rose-pine', lazy = false, priority = 1000 },
   'nvim-lualine/lualine.nvim',
