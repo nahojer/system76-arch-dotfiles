@@ -30,6 +30,8 @@ nmap { '<Left>', ':vertical resize +2<CR>', opts 'Resize win left' }
 nmap { '<Right>', ':vertical resize -2<CR>', opts 'Resize win right' }
 
 -- always center
+nmap { '<C-d>', '<C-d>zz', opts() }
+nmap { '<C-u>', '<C-u>zz', opts() }
 nmap { 'n', 'nzzzv', opts() }
 nmap { 'N', 'Nzzzv', opts() }
 nmap { 'J', 'mzJ`z', opts() }
@@ -56,9 +58,6 @@ imap { ' ', ' <c-g>u', opts() }
 -- stay in indent mode.
 vmap { '<', '<gv', opts() }
 vmap { '>', '>gv', opts() }
-
-cmap { '<C-j>', 'pumvisible() ? "\\<C-n>" : "\\<C-j>"', opts() }
-cmap { '<C-k>', 'pumvisible() ? "\\<C-p>" : "\\<C-k>"', opts() }
 
 -- https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
 vim.cmd [[
