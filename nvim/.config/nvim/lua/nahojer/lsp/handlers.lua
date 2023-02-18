@@ -1,3 +1,13 @@
+vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.handlers['textDocument/publishDiagnostics'], {
+  signs = {
+    severity_limit = 'Error',
+  },
+  underline = {
+    severity_limit = 'Warning',
+  },
+  virtual_text = true,
+})
+
 local M = {}
 
 M.implementation = function()

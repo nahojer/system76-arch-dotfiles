@@ -18,3 +18,4 @@ vim.opt.rtp:prepend(lazypath)
 
 require 'nahojer.plugins'
 require 'nahojer.colorscheme'
+require 'nahojer.lsp'
