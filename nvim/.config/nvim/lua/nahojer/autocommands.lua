@@ -18,22 +18,3 @@ vim.api.nvim_create_autocmd({ 'BufEnter' }, {
     vim.opt.formatoptions = vim.opt.formatoptions - { 'a', 't', 'o', '2' }
   end,
 })
-
--- Add keymappings in netrw
-vim.api.nvim_create_autocmd({ 'filetype' }, {
-  pattern = { 'netrw' },
-  desc = 'Cosier mappings for netrw',
-  callback = function()
-    local bind = function(lhs, rhs)
-      vim.keymap.set('n', lhs, rhs, { remap = true, buffer = true })
-    end
-
-    bind('H', 'u') -- "go back" in history
-    bind('h', '-^') -- "go up" a directory
-    bind('l', '<CR>') -- open direcorty or file
-    bind('.', 'gh') -- toggle dotfiles
-    bind('P', '<C-w>z') -- close preview window
-    bind('L', '<CR>:Lexplore<CR>') -- Open file and close Netrw
-    bind('r', 'R') -- Rename file
-  end,
-})

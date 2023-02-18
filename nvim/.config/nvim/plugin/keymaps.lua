@@ -68,9 +68,6 @@ imap { ' ', ' <c-g>u', opts() }
 vmap { '<', '<gv', opts() }
 vmap { '>', '>gv', opts() }
 
-nmap { '<leader>e', '<cmd>:Lexplore<CR>', opts 'Explorer' }
-nmap { '<leader>E', '<cmd>:Lexplore %:p:h<CR>', opts 'Explorer (cwd)' }
-
 -- https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
 vim.cmd [[
 	" Saner behavior of n and N.
