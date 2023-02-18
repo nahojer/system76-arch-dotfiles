@@ -18,7 +18,6 @@ o.undofile = true -- enable persistent undo
 o.writebackup = false
 o.hidden = true -- allow unsaved buffers
 
-o.timeoutlen = 200 -- time to wait for a mapped sequence to complete (ms)
 o.updatetime = 300 -- faster completion (4000ms default)
 
 o.showmode = false
