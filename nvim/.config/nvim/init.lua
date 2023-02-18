@@ -1,4 +1,4 @@
-require 'globals'
+require 'nahojer.globals'
 require 'nahojer.commands'
 
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -14,5 +14,5 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require 'plugins'
-require 'colorscheme'
+require 'nahojer.plugins'
+require 'nahojer.colorscheme'
