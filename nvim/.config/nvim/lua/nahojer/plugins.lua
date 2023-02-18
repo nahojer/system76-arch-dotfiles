@@ -6,7 +6,8 @@ return require('lazy').setup {
   -- Theme and styling
   { 'rose-pine/neovim', name = 'rose-pine', lazy = false, priority = 1000 },
   'nvim-lualine/lualine.nvim',
-  'kyazdani42/nvim-web-devicons', -- note: requires patched fonts
+  'kyazdani42/nvim-web-devicons',
+  'chentoast/marks.nvim',
 
   -- Syntax
   { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
@@ -16,7 +17,7 @@ return require('lazy').setup {
   'brenoprata10/nvim-highlight-colors',
 
   -- Language Server Protocol
-  'williamboman/mason.nvim', -- Package manager for LSP, linters etc
+  'williamboman/mason.nvim',
   'williamboman/mason-lspconfig.nvim',
   'jay-babu/mason-null-ls.nvim',
   'neovim/nvim-lspconfig',
