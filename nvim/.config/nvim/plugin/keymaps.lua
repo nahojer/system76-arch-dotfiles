@@ -36,6 +36,16 @@ nmap { 'N', 'Nzzzv', opts() }
 nmap { 'J', 'mzJ`z', opts() }
 
 nmap { 'Y', 'yg$', opts() }
+nmap { '<leader>Y', '"+Y', opts 'Yank line to clipboard' }
+nmap { '<leader>y', '"+y', opts 'Yank to clipboard' }
+vmap { '<leader>y', '"+y', opts 'Yank to clipboard' }
+nmap { '<leader>p', '"+p', opts 'Paste from clipboard' }
+vmap { '<leader>p', '"+p', opts 'Paste from clipboard' }
+vmap { '<leader>P', '"_dp', opts 'Paste' } -- No need to re-yank when pasting over selection multiple times.
+nmap { '<leader>d', '"_d', opts 'Black hole delete' }
+vmap { '<leader>d', '"_d', opts 'Black hole delete' }
+nmap { '<leader>c', '"_c', opts 'Black hole change' }
+vmap { '<leader>c', '"_c', opts 'Black hole change' }
 
 nmap { '<M-j>', ':m .+1<CR>==', opts 'Move line up' }
 nmap { '<M-k>', ':m .-2<CR>==', opts 'Move line down' }
