@@ -41,3 +41,12 @@ require('treesitter-context').setup {
     },
   },
 }
+
+require('nvim-treesitter.configs').setup {
+  context_commentstring = {
+    enable = true,
+    config = {
+      zig = '// %s',
+    },
+  },
+}
