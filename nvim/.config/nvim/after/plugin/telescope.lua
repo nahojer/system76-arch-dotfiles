@@ -1,5 +1,7 @@
 local fb_actions = require 'telescope._extensions.file_browser.actions'
-require('telescope').setup {
+local telescope = require 'telescope'
+
+telescope.setup {
   defaults = {
     preview = {
       msg_bg_fillchar = '░',
@@ -88,11 +90,26 @@ require('telescope').setup {
         },
       },
     },
+    media_files = {
+      filetypes = {
+        -- sudo pacman -S chafa
+        'png',
+        'webp',
+        'jpg',
+        'jpeg',
+        'webm',
+        -- sudo pacman -S poppler
+        'pdf',
+        -- sudo pacman -S imagemagick
+        'svg',
+      },
+    },
   },
 }
 
-require('telescope').load_extension 'fzf'
-require('telescope').load_extension 'file_browser'
+telescope.load_extension 'fzf'
+telescope.load_extension 'file_browser'
+telescope.load_extension 'media_files'
 
 local nmap = require('nahojer.keymap').nmap
 
