@@ -34,6 +34,7 @@ local servers = {
   tsserver = require('nahojer.lsp.tsserver').config,
   lua_ls = require('nahojer.lsp.lua').config,
   bashls = {},
+  zls = {},
 }
 
 local lspconfig = require 'lspconfig'

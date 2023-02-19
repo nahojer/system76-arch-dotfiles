@@ -19,6 +19,8 @@ M.config = {
       },
     },
 
+    null_ls.builtins.formatting.zigfmt,
+
     -- shell / bash
     null_ls.builtins.diagnostics.shellcheck,
 
