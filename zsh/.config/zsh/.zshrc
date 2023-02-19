@@ -198,15 +198,9 @@ fi
 # ---------------
 [[ $- == *i* ]] && source "/home/j/.dotfiles/vim/.config/vim/plugged/fzf/shell/completion.zsh" 2> /dev/null
 
-# Key bindings
-# ------------
-source "/home/j/.dotfiles/vim/.config/vim/plugged/fzf/shell/key-bindings.zsh"
-
 ###
 # X11
 ###
-
-export WINDOW_MANAGER="bspwm"
 
 lockscreen() {
 	# https://github.com/google/xsecurelock

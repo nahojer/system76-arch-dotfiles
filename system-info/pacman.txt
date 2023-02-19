@@ -26,6 +26,7 @@ dunst
 efibootmgr
 exa
 fakeroot
+fd
 file
 findutils
 firefox

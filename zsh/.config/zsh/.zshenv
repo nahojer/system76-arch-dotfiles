@@ -55,7 +55,6 @@ export CONDA_PKGS_DIRS=/opt/conda/pkgs
 [[ -f "$HOME/.local/share/cargo/env" ]] && . "$HOME/.local/share/cargo/env"
 
 # PATH:
-export PATH="$PATH:${$(find $HOME/.local/bin -type d -printf %p:)%%:}" # Adds `~/.local/bin` to $PATH
 export PATH="$PATH:${XDG_DATA_HOME:-$HOME/.local/share}/go/bin"
 export PATH="$PATH:${XDG_DATA_HOME:-$HOME/.local/share}/zlz/bin"
 export PATH="$PATH:${XDG_DATA_HOME:-$HOME/.local/share}/cargo/bin"
