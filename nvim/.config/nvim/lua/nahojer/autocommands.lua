@@ -18,3 +18,8 @@ vim.api.nvim_create_autocmd({ 'BufEnter' }, {
     vim.opt.formatoptions = vim.opt.formatoptions - { 'a', 't', 'o', '2' }
   end,
 })
+
+-- Always start :terminal in insert mode.
+vim.api.nvim_command 'autocmd TermOpen * startinsert'
+-- Delete terminal buffer on close.
+vim.api.nvim_command "autocmd TermClose * if !v:event.status | exe 'bdelete! '..expand('<abuf>') | endif"
