@@ -21,6 +21,7 @@ return require('lazy').setup {
   'jay-babu/mason-null-ls.nvim',
   'neovim/nvim-lspconfig',
   { 'jose-elias-alvarez/null-ls.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
+  'ray-x/lsp_signature.nvim',
 
   -- Snippets
   'L3MON4D3/LuaSnip', -- note: required by cmp

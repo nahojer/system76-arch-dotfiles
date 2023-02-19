@@ -33,8 +33,8 @@ local servers = {
   gopls = require('nahojer.lsp.go').config,
   tsserver = require('nahojer.lsp.tsserver').config,
   lua_ls = require('nahojer.lsp.lua').config,
+  zls = require('nahojer.lsp.zig').config,
   bashls = {},
-  zls = {},
 }
 
 local lspconfig = require 'lspconfig'
