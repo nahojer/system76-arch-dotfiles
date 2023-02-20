@@ -83,4 +83,8 @@ o.completeopt = {
 }
 o.shortmess:append 'c' -- don't show redundant messages from ins-completion-menu
 
+vim.g.netrw_keepdir = 0
+vim.g.netrw_winsize = 15
+vim.g.netrw_banner = 0
+
 vim.cmd 'language en_US.utf8'

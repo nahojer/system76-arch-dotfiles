@@ -48,11 +48,6 @@ vmap { '<leader>d', '"_d', opts 'Black hole delete' }
 nmap { '<leader>c', '"_c', opts 'Black hole change' }
 vmap { '<leader>c', '"_c', opts 'Black hole change' }
 
-nmap { '<M-j>', ':m .+1<CR>==', opts 'Move line up' }
-nmap { '<M-k>', ':m .-2<CR>==', opts 'Move line down' }
-vmap { 'J', ":m '>+1<CR>gv=gv", opts() }
-vmap { 'K', ":m '<-2<CR>gv=gv", opts() }
-
 imap { '<Up>', '<Nop>', opts() }
 imap { '<Down>', '<Nop>', opts() }
 imap { '<Left>', '<Nop>', opts() }
@@ -87,6 +82,14 @@ nmap { '<A-h>', '<C-w>h', opts() }
 nmap { '<A-j>', '<C-w>j', opts() }
 nmap { '<A-k>', '<C-w>j', opts() }
 nmap { '<A-l>', '<C-w>l', opts() }
+
+nmap { '<A-S-j>', ':m .+1<CR>==', opts 'Move line up' }
+nmap { '<A-S-k>', ':m .-2<CR>==', opts 'Move line down' }
+vmap { 'J', ":m '>+1<CR>gv=gv", opts() }
+vmap { 'K', ":m '<-2<CR>gv=gv", opts() }
+
+nmap { '<leader>e', '<cmd>:Lexplore<CR>', opts 'Explorer' }
+nmap { '<leader>E', '<cmd>:Lexplore %:p:h<CR>', opts 'Explorer (cwd)' }
 
 -- https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
 vim.cmd [[
