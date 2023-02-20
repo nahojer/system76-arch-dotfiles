@@ -13,7 +13,7 @@ return require('lazy').setup {
   { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
   'nvim-treesitter/nvim-treesitter-context',
   'JoosepAlviste/nvim-ts-context-commentstring',
-  'brenoprata10/nvim-highlight-colors',
+  'norcalli/nvim-colorizer.lua',
 
   -- Language Server Protocol
   'williamboman/mason.nvim',
