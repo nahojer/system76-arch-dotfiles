@@ -1,7 +1,7 @@
 return require('lazy').setup {
   -- Core
   'tpope/vim-commentary',
-  'tpope/vim-surround',
+  { 'kylechui/nvim-surround', tag = '*' },
 
   -- Theme and styling
   { 'rose-pine/neovim', name = 'rose-pine', lazy = false, priority = 1000 },
