@@ -1,6 +1,6 @@
 return require('lazy').setup {
   -- Core
-  'tpope/vim-commentary',
+  'numToStr/Comment.nvim',
   { 'kylechui/nvim-surround', tag = '*' },
 
   -- Theme and styling
