@@ -33,6 +33,7 @@ return require('lazy').setup {
   'hrsh7th/cmp-nvim-lua', -- source nvim lua
   'hrsh7th/cmp-nvim-lsp', -- source nvim lsp
   'onsails/lspkind-nvim', -- fancy icons for completion
+  'windwp/nvim-autopairs',
 
   -- Search / Navigation
   { 'nvim-telescope/telescope.nvim', dependencies = { 'nvim-lua/popup.nvim', 'nvim-lua/plenary.nvim' } },
