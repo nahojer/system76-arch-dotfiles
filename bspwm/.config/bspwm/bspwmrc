@@ -1,5 +1,5 @@
-#! /bin/sh
-$HOME/.config/bspwm/autostart.sh
+#! /bin/bash
+"$HOME"/.config/bspwm/autostart.sh
 
 bspc monitor "%$(primarymonitor)" -d 1 2 3 4 5 6
 [[ "$(secondarymonitor)" != "" ]] && bspc monitor "%$(secondarymonitor)" -d 7 8 9 0

@@ -1,4 +1,5 @@
 asmfmt
+cobra-cli
 dlv
 errcheck
 fillstruct
