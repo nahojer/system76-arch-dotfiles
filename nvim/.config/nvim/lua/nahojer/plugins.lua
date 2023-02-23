@@ -14,6 +14,7 @@ return require('lazy').setup {
   'nvim-treesitter/nvim-treesitter-context',
   'JoosepAlviste/nvim-ts-context-commentstring',
   'norcalli/nvim-colorizer.lua',
+  'nvim-treesitter/nvim-treesitter-textobjects',
 
   -- Language Server Protocol
   'williamboman/mason.nvim',
