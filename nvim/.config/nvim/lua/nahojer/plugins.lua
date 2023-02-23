@@ -40,4 +40,7 @@ return require('lazy').setup {
   { 'nvim-telescope/telescope.nvim', dependencies = { 'nvim-lua/popup.nvim', 'nvim-lua/plenary.nvim' } },
   { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
   'nvim-telescope/telescope-media-files.nvim',
+
+  -- Terminal
+  { 'akinsho/toggleterm.nvim', version = '*', config = true },
 }

@@ -2,7 +2,6 @@ local gmap = require('nahojer.keymap').gmap
 local nmap = require('nahojer.keymap').nmap
 local vmap = require('nahojer.keymap').vmap
 local imap = require('nahojer.keymap').imap
-local tmap = require('nahojer.keymap').tmap
 
 local function opts(desc)
   return { silent = true, desc = desc }
@@ -64,20 +63,7 @@ imap { ' ', ' <c-g>u', opts() }
 vmap { '<', '<gv', opts() }
 vmap { '>', '>gv', opts() }
 
--- Terminal
-tmap { '<esc>', '<C-\\><C-n>', opts 'Exit terminal mode' } -- By default we need to use <C-\><C-n> to return to normal mode.
-nmap { '<C-w>tv', '<cmd>:vsplit | terminal<CR>', opts 'New terminal in vsplit' }
-nmap { '<C-w>ts', '<cmd>:split | terminal<CR>', opts 'New terminal in hsplit' }
-
 -- Better window navigation
-tmap { '<A-h>', '<C-\\><C-n><C-w>h', opts() }
-tmap { '<A-j>', '<C-\\><C-n><C-w>j', opts() }
-tmap { '<A-k>', '<C-\\><C-n><C-w>k', opts() }
-tmap { '<A-l>', '<C-\\><C-n><C-w>l', opts() }
-imap { '<A-h>', '<C-\\><C-n><C-w>h', opts() }
-imap { '<A-j>', '<C-\\><C-n><C-w>j', opts() }
-imap { '<A-k>', '<C-\\><C-n><C-w>k', opts() }
-imap { '<A-l>', '<C-\\><C-n><C-w>l', opts() }
 nmap { '<A-h>', '<C-w>h', opts() }
 nmap { '<A-j>', '<C-w>j', opts() }
 nmap { '<A-k>', '<C-w>j', opts() }
