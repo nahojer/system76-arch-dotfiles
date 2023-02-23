@@ -52,6 +52,8 @@ intel-ucode
 iwd
 kubectl
 kustomize
+lazydocker
+lazygit
 libtool
 linux
 linux-firmware
