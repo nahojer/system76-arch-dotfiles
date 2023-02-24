@@ -25,7 +25,7 @@ return require('lazy').setup {
   'ray-x/lsp_signature.nvim',
 
   -- Snippets
-  'L3MON4D3/LuaSnip', -- note: required by cmp
+  { 'L3MON4D3/LuaSnip', build = 'make install_jsregexp' }, -- note: required by cmp
 
   -- Completion
   'hrsh7th/nvim-cmp', -- auto completion
