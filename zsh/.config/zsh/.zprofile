@@ -1,3 +1,5 @@
+export MOZ_USE_XINPUT2="1" # Mozilla smooth scrolling/touchpads.
+
 export GIT_TERMINAL_PROMPT=1
 
 export WIFI_STATION="$(ip route | grep '^default' | awk '{print $5}' | head -n1)"
@@ -6,4 +8,5 @@ export RICE="rose-pine"
 
 ssh-add ~/.ssh/id_rsa_github_nahojer
 
-export MOZ_USE_XINPUT2="1" # Mozilla smooth scrolling/touchpads.
+[[ -f "$ZDOTDIR/.workprofile" ]] && . "$ZDOTDIR/.workprofile" 
+

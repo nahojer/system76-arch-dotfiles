@@ -180,12 +180,6 @@ alias \
 	yarn="yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config" \
   vimbegood="docker run -it --rm brandoncc/vim-be-good:stable"
 
-### 
-# Functions
-###
-
-[[ -f "$ZDOTDIR/.workrc" ]] && . "$ZDOTDIR/.workrc" 
-
 ###
 # FZF
 ###
