@@ -16,3 +16,5 @@ restart sxhkd -c "$HOME/.local/share/dwm/sxhkd/sxhkdrc"
 restart picom
 
 run nitrogen --restore
+
+restart slstatus
