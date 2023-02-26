@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 function run {
   if ! pgrep $1 ;
@@ -12,6 +12,7 @@ function restart {
   $@&
 }
 
+restart sxhkd -c "$HOME/.local/share/dwm/sxhkd/sxhkdrc"
 restart picom
 
 run nitrogen --restore

@@ -1,0 +1,50 @@
+#
+# dwm environment hotkeys (dwm specific is configured in dwm/config.def.h)
+#
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+#
+# special keys
+#
+
+XF86MonBrightnessUp
+	brightnessctl set +3%
+
+XF86MonBrightnessDown
+	brightnessctl set 3%-
+
+XF86AudioMute
+	pamixer --toggle-mute
+
+XF86Audio{Lower,Raise}Volume
+	pamixer -{d,i} 5
+
+#XF86Audio{Play,Prev,Next,Stop}
+#	~/.local/bin/mediacontrolkeys.sh {PlayPause,Previous,Next,Stop}
+
+XF86Sleep
+	# https://github.com/google/xsecurelock
+	xset s activate && systemctl suspend -i
+
+#
+# applications
+#
+
+# terminal emulator
+super + Return
+	alacritty
+
+# terminal emulater running tmux
+super + shift + Return
+	alacritty -e tmux
+
+# program launcher
+super + d
+	dmenu_run
+
+super + ctrl + p
+	togglexkbmap
+
