@@ -13,7 +13,13 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int horizpadbar        = 2;        /* horizontal padding for statusbar */
 static const int vertpadbar         = 0;        /* vertical padding for statusbar */
 
-static const char *fonts[]          = { "monospace:size=10" };
+static const char *fonts[] = { 
+  "Inconsolata Condensed Bold:size=11;2", 
+  "Material Design Icons Desktop:size=14;3",  
+  "Font Awesome 6 Free Solid:size=11;3", 
+  "MesloLGS NF:style=Regular:size=13;3", 
+  "monospace:size=10",
+};
 
 #include "colors/rose-pine.h"
 static const char *colors[][3]  = {
@@ -42,9 +48,8 @@ static const int tagschemes[] = { SchemeTag1, SchemeTag2, SchemeTag3,
 
 static const int titleschemes[] = { SchemeTitle1, SchemeTitle2, SchemeTitle3,
                                     SchemeTitle4, SchemeTitle5, SchemeTitle6 };
-
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "󰆍", "󰅩", "󰈹", "󰓇", "󰒱", "󱐖" };
 
 static const Rule rules[] = {
   /* xprop(1):
@@ -105,9 +110,6 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_4,                      3)
 	TAGKEYS(                        XK_5,                      4)
 	TAGKEYS(                        XK_6,                      5)
-	TAGKEYS(                        XK_7,                      6)
-	TAGKEYS(                        XK_8,                      7)
-	TAGKEYS(                        XK_9,                      8)
 };
 
 /* button definitions */
