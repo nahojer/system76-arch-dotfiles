@@ -18,7 +18,7 @@ static const char *fonts[] = {
   "Material Design Icons Desktop:size=14;3",  
   "Font Awesome 6 Free Solid:size=11;3", 
   "MesloLGS NF:style=Regular:size=13;3", 
-  "monospace:size=10",
+  "monospace:size=12",
 };
 
 #include "colors/rose-pine.h"
