@@ -60,7 +60,12 @@
 
 /* enums */
 enum { CurNormal, CurResize, CurMove, CurLast }; /* cursor */
-enum { SchemeNorm, SchemeSel }; /* color schemes */
+enum { SchemeNorm, SchemeSel,
+  SchemeTag, SchemeTag1, SchemeTag2, SchemeTag3,
+  SchemeTag4, SchemeTag5, SchemeTag6, SchemeLayout,
+  SchemeTitle, SchemeTitleFloat,
+  SchemeTitle1, SchemeTitle2, SchemeTitle3,
+  SchemeTitle4, SchemeTitle5, SchemeTitle6 }; /* color schemes */
 enum { NetSupported, NetWMName, NetWMState, NetWMCheck,
        NetWMFullscreen, NetActiveWindow, NetWMWindowType,
        NetWMWindowTypeDialog, NetClientList, NetLast }; /* EWMH atoms */
