@@ -22,6 +22,7 @@ debugedit
 dhcpcd
 dialog
 docker
+docker-compose
 dosfstools
 dunst
 efibootmgr
