@@ -6,6 +6,7 @@ return require('lazy').setup {
   -- Theme and styling
   { 'rose-pine/neovim', name = 'rose-pine', lazy = false, priority = 1000 },
   'olivertaylor/vacme',
+  'morhetz/gruvbox',
   'nvim-lualine/lualine.nvim',
   'kyazdani42/nvim-web-devicons',
   'chentoast/marks.nvim',

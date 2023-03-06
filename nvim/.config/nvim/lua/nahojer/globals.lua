@@ -1,5 +1,6 @@
 -- COLORSCHEME = 'rose-pine'
-COLORSCHEME = 'vacme'
+-- COLORSCHEME = 'vacme'
+COLORSCHEME = 'gruvbox'
 
 P = function(v)
   print(vim.inspect(v))
