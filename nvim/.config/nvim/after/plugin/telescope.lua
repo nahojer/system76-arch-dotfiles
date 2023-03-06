@@ -85,3 +85,4 @@ nmap {
 }
 nmap { '<leader>fb', '<cmd>lua require("nahojer.telescope").buffers()<CR>', opts 'Find buf' }
 nmap { '<leader>ft', '<cmd>lua require("nahojer.telescope").current_buffer_fuzzy_find()<CR>', opts 'Fuzzy find text' }
+nmap { '<leader>fm', '<cmd>Telescope marks<CR>', opts 'Fuzzy find text' }
