@@ -7,6 +7,6 @@ static const char fg2[]      = "#908caa";
 static const char red[]      = "#eb6f92";
 static const char yellow[]   = "#f6c177";
 static const char white[]    = "#ffffff";
-static const char bluu[]     = "#31748f";
+static const char blue[]     = "#31748f";
 static const char cyan[]     = "#9ccfd8";
 static const char purple[]   = "#c4a7e7";
