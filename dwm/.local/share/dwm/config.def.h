@@ -26,21 +26,21 @@ static const char *fonts[] = {
   "monospace:size=12",
 };
 
-#include "colors/rose-pine.h"
+#include "colors/nahojer.h"
 static const char *colors[][3]  = {
   /*                     fg   bg   border */
   [SchemeNorm]       = { fg1, bg0, fg2 },
-  [SchemeSel]        = { bg1, rose, rose },
+  [SchemeSel]        = { bg1, white, white },
   [SchemeTag]        = { bg0, bg1, bg0 },
-  [SchemeTag1]       = { rose, bg0,  bg1 },
+  [SchemeTag1]       = { white, bg0,  bg1 },
   [SchemeTag2]       = { red, bg0, bg1 },
   [SchemeTag3]       = { yellow, bg0, bg1 },
   [SchemeTag4]       = { bluu, bg0, bg1 },
   [SchemeTag5]       = { purple, bg0, bg1 },
   [SchemeTag6]       = { cyan, bg0, bg1 },
-  [SchemeLayout]     = { rose, bg0, bg1 },
+  [SchemeLayout]     = { white, bg0, bg1 },
   [SchemeTitle]      = { fg0, bg0, bg1 },
-  [SchemeTitle1]     = { rose, bg0, bg1 },
+  [SchemeTitle1]     = { white, bg0, bg1 },
   [SchemeTitle2]     = { red, bg0, bg1 },
   [SchemeTitle3]     = { yellow, bg0, bg1 },
   [SchemeTitle4]     = { bluu, bg0, bg1 },

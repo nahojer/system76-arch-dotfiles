@@ -15,6 +15,6 @@ function restart {
 restart sxhkd -c "$HOME/.local/share/dwm/sxhkd/sxhkdrc"
 restart picom
 
-#run ~/.local/share/dwm/scripts/bar
+run ~/.local/share/dwm/scripts/bar
 
 run nitrogen --restore
