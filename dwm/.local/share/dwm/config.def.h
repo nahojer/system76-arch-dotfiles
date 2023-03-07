@@ -29,14 +29,14 @@ static const char *fonts[] = {
 #include "colors/nahojer.h"
 static const char *colors[][3]  = {
   /*                     fg   bg   border */
-  [SchemeNorm]       = { fg1, bg0, fg2 },
+  [SchemeNorm]       = { fg0, bg0, fg1 },
   [SchemeSel]        = { bg1, blue, white },
   [SchemeTag]        = { bg0, bg1, bg0 },
   [SchemeTag1]       = { blue, bg0,  bg1 },
   [SchemeTag2]       = { red, bg0, bg1 },
   [SchemeTag3]       = { yellow, bg0, bg1 },
   [SchemeTag4]       = { blue, bg0, bg1 },
-  [SchemeTag5]       = { purple, bg0, bg1 },
+  [SchemeTag5]       = { magenta, bg0, bg1 },
   [SchemeTag6]       = { cyan, bg0, bg1 },
   [SchemeLayout]     = { blue, bg0, bg1 },
   [SchemeTitle]      = { fg0, bg0, bg1 },
@@ -44,7 +44,7 @@ static const char *colors[][3]  = {
   [SchemeTitle2]     = { red, bg0, bg1 },
   [SchemeTitle3]     = { yellow, bg0, bg1 },
   [SchemeTitle4]     = { blue, bg0, bg1 },
-  [SchemeTitle5]     = { purple, bg0, bg1 },
+  [SchemeTitle5]     = { magenta, bg0, bg1 },
   [SchemeTitle6]     = { cyan, bg0, bg1 },
 };
 
