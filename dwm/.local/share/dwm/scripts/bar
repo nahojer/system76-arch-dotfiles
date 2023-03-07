@@ -1,6 +1,37 @@
 #!/bin/bash
 
+
+function audio_text() {
+  is_muted=$([[ "$(pactl list sinks | grep '^[[:space:]]Mute:' | awk '{print $2}')" == "yes" ]] && echo 0 || echo 1)
+  headphones_connected=$([[ "$(pactl list sinks | grep '^[[:space:]]Active Port:' | awk '{print $3}')" == "analog-output-headphones" ]] && echo 0 || echo 1)
+  volume=$(pactl list sinks | grep '^[[:space:]]Volume:' | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,')
+
+  if [[ $headphones_connected -eq 0 ]]; then
+    [[ $is_muted -eq 0 ]] && echo "󰟎" || echo "󰋋 $volume"
+  else
+    [[ $is_muted -eq 0 ]] && echo "󰖁" || echo "󰕾 $volume"
+  fi
+}
+
+function time_text() {
+  TZ=Europe/Stockholm date +"󱑇 %I:%M %p"
+}
+
+function kblayout_text() {
+  layout=$(setxkbmap -query | grep -q 'us' && echo "US" || echo "SE")
+  echo "󰌌 $layout"
+}
+
+function used_mem_text() {
+  echo "󰍛 $(free | grep Mem | awk '{print int(($3/$2)*100+0.5)}')%"
+}
+
+function used_disk_text() {
+  echo "󰋊 $(df -BG --output=used / | grep -v "Used" | xargs)" 
+}
+
 while true; do
-  xsetroot -name  "  $(TZ=Europe/Stockholm date +"󱑇 %I:%M %p") "
+  xsetroot -name  "  $(used_disk_text) | $(used_mem_text) | $(audio_text) | $(kblayout_text) | $(time_text) "
   sleep 1
 done
+
