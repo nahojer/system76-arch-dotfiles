@@ -1,6 +1,4 @@
--- COLORSCHEME = 'rose-pine'
--- COLORSCHEME = 'vacme'
-COLORSCHEME = 'gruvbox'
+COLORSCHEME = 'carbonfox'
 
 P = function(v)
   print(vim.inspect(v))

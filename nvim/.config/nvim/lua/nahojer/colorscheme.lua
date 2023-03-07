@@ -37,10 +37,6 @@ if COLORSCHEME == 'rose-pine' then
       ColorColumn = { bg = 'rose' },
     },
   }
-
-  vim.cmd 'colorscheme rose-pine'
-elseif COLORSCHEME == 'vacme' then
-  vim.cmd 'colorscheme vacme'
-elseif COLORSCHEME == 'gruvbox' then
-  vim.cmd 'colorscheme gruvbox'
 end
+
+vim.cmd('colorscheme ' .. COLORSCHEME)

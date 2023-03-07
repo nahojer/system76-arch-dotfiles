@@ -1,16 +1,16 @@
 import:
   - ~/.config/alacritty/base.yml
 
-# Source: https://github.com/zatchheems/tokyo-night-alacritty-theme
+# Source: https://github.com/folke/tokyonight.nvim/blob/main/extras/alacritty/tokyonight_day.yml
 colors:
   # Default colors
   primary:
-    background: '0x24283b'
+    background: '0x1a1b26'
     foreground: '0xc0caf5'
 
   # Normal colors
   normal:
-    black:   '0x1d202f'
+    black:   '0x15161e'
     red:     '0xf7768e'
     green:   '0x9ece6a'
     yellow:  '0xe0af68'

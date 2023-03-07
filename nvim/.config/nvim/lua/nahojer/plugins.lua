@@ -1,12 +1,14 @@
 return require('lazy').setup {
   -- Core
   'numToStr/Comment.nvim',
-  { 'kylechui/nvim-surround', tag = '*' },
+  { 'kylechui/nvim-surround' },
 
   -- Theme and styling
   { 'rose-pine/neovim', name = 'rose-pine', lazy = false, priority = 1000 },
   'olivertaylor/vacme',
-  'morhetz/gruvbox',
+  'folke/tokyonight.nvim',
+  { 'catppuccin/nvim', name = 'catppuccin' },
+  'EdenEast/nightfox.nvim',
   'nvim-lualine/lualine.nvim',
   'kyazdani42/nvim-web-devicons',
   'chentoast/marks.nvim',
