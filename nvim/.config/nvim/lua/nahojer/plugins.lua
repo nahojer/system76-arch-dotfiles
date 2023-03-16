@@ -47,4 +47,7 @@ return require('lazy').setup {
 
   -- Terminal
   { 'akinsho/toggleterm.nvim', version = '*', config = true },
+
+  -- Git
+  { 'lewis6991/gitsigns.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
 }
