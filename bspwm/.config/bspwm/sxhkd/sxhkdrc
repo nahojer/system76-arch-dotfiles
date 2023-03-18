@@ -160,7 +160,8 @@ super + shift + Return
 
 # program launcher
 super + d
-	dmenu_run
+  rofi -no-lazy-grab -show drun -theme $XDG_CONFIG_HOME/bspwm/rices/$RICE/launcher.rasi
+#dmenu_run
 
 super + ctrl + p
 	togglexkbmap
