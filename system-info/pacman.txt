@@ -48,6 +48,7 @@ groff
 grub
 gzip
 helix-git
+htop
 inetutils
 intel-ucode
 iwd
@@ -87,6 +88,7 @@ pipewire-jack
 pipewire-pulse
 pkgconf
 polybar
+postman-bin
 python-pip
 qutebrowser
 reflector
