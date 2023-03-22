@@ -51,6 +51,10 @@ imap { '<Up>', '<Nop>', opts() }
 imap { '<Down>', '<Nop>', opts() }
 imap { '<Left>', '<Nop>', opts() }
 imap { '<Down>', '<Nop>', opts() }
+vmap { '<Up>', '<Nop>', opts() }
+vmap { '<Down>', '<Nop>', opts() }
+vmap { '<Left>', '<Nop>', opts() }
+vmap { '<Down>', '<Nop>', opts() }
 
 -- undo breakpoints
 imap { ',', ',<c-g>u', opts() }
