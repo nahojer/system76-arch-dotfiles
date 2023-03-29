@@ -51,6 +51,9 @@ export CONDA_ROOT=/opt/conda
 export CONDA_ENVS_PATH=/opt/conda/envs
 export CONDA_PKGS_DIRS=/opt/conda/pkgs
 
+# xsecurelock
+export XSECURELOCK_NO_COMPOSITE=1 # Prevent "INCOMPATIBLE COMPOSITOR, PLEASE FIX!" to be displayed.
+
 # Rust
 [[ -f "$HOME/.local/share/cargo/env" ]] && . "$HOME/.local/share/cargo/env"
 
