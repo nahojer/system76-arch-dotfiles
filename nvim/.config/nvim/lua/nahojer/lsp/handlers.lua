@@ -37,4 +37,12 @@ M.implementation = function()
   end)
 end
 
+M.hover = function()
+  -- Fixes issue where the CursorHold autocmd for showing diagnostics
+  -- would trigger when trying to Hover on the same line.
+  vim.api.nvim_command 'set eventignore=CursorHold'
+  vim.api.nvim_command 'autocmd CursorMoved <buffer> ++once set eventignore=""'
+  vim.lsp.buf.hover()
+end
+
 return M

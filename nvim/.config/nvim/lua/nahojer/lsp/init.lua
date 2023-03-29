@@ -16,7 +16,7 @@ local function generic_on_attach()
   nmap { 'gI', handlers.implementation, { buffer = 0, silent = true, noremap = true, desc = 'Go to implementation' } }
   nmap { '<leader>d', '<cmd>Telescope diagnostics bufnr=0<CR>', { silent = true, noremap = true, desc = 'Open diagnostics picker' } }
   nmap { '<leader>D', '<cmd>Telescope diagnostics<CR>', { silent = true, noremap = true, desc = 'Open workspace diagnostics picker' } }
-  nmap { '<leader>k', '<cmd>lua vim.lsp.buf.hover()<CR>', { silent = true, noremap = true, desc = 'Show docs for item under cursor' } }
+  nmap { '<leader>k', handlers.hover, { silent = true, noremap = true, desc = 'Show docs for item under cursor' } }
   nmap { ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', { silent = true, noremap = true, desc = 'Go to next diagnostic' } }
   nmap { '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', { silent = true, noremap = true, desc = 'Go to previous diagnostic' } }
   nmap { '<leader>s', '<cmd>Telescope lsp_document_symbols<CR>', { silent = true, noremap = true, desc = 'Open symbol picker' } }
