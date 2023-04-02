@@ -106,6 +106,7 @@ sxhkd
 system76-driver
 system76-firmware
 system76-firmware-daemon
+terraform
 texinfo
 tmux
 tree
