@@ -30,14 +30,3 @@ bspc config border_width         2
 
 # Rules
 bspc rule -r "*" # Remove any previously added rules
-
-if [[ "$(secondarymonitor)" == "" ]]; then
-  # Do xprop check for app names.
-  bspc rule -a Alacritty desktop='^1'
-  bspc rule -a org.wezfurlong.wezterm desktop='^1'
-  bspc rule -a Code desktop='^2'
-  bspc rule -a firefox desktop='^3'
-  bspc rule -a qutebrowser desktop='^3'
-  bspc rule -a Slack desktop='^5'
-  bspc rule -a Bitwarden desktop='^5'
-fi
