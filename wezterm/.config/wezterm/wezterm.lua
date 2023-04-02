@@ -6,10 +6,10 @@ return {
 	front_end = "OpenGL",
 
 	-- Colors
-	color_scheme = 'Colorful Colors (terminal.sexy)',
+	color_scheme = 'deep',
 
 	-- Transparency
-	-- window_background_opacity = 0.95;
+	window_background_opacity = 1;
 
 	-- Font
 	font_size = 10,
