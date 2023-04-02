@@ -9,4 +9,5 @@ export RICE="catppuccin-frappe"
 ssh-add ~/.ssh/id_rsa_github_nahojer
 
 [[ -f "$ZDOTDIR/.workprofile" ]] && . "$ZDOTDIR/.workprofile" 
+[[ -f "$ZDOTDIR/.zshprivate" ]] && . "$ZDOTDIR/.zshprivate" 
 

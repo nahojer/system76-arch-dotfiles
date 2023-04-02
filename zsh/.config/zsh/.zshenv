@@ -9,7 +9,6 @@ export EDITOR="hx"
 export VISUAL="hx"
 export TERMINAL="wezterm"
 export BROWSER="qutebrowser"
-export CM_LAUNCHER="rofi"
 
 # $HOME cleanup:
 #Config
@@ -62,4 +61,5 @@ export PATH="$PATH:${XDG_DATA_HOME:-$HOME/.local/share}/go/bin"
 export PATH="$PATH:${XDG_DATA_HOME:-$HOME/.local/share}/zlz/bin"
 export PATH="$PATH:${XDG_DATA_HOME:-$HOME/.local/share}/cargo/bin"
 export PATH="$PATH:${XDG_DATA_HOME:-$HOME/.local/share}/scripts"
+export PATH="$PATH:${XDG_CONFIG_HOME:-$HOME/.config}/qutebrowser/userscripts"
 export PATH="$PATH:$HOME/.local/bin"
