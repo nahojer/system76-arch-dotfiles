@@ -5,11 +5,11 @@
 unsetopt PROMPT_SP
 
 # Default programs:
-export EDITOR="nvim"
-export VISUAL="nvim"
-export TERMINAL="alacritty"
-export BROWSER="firefox"
-export CM_LAUNCHER="dmenu"
+export EDITOR="hx"
+export VISUAL="hx"
+export TERMINAL="wezterm"
+export BROWSER="qutebrowser"
+export CM_LAUNCHER="rofi"
 
 # $HOME cleanup:
 #Config

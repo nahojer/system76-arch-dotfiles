@@ -1,11 +1,11 @@
-# theme = "rose_pine_dawn" # Light theme
-theme = "rose_pine" # Dark theme
+theme = "base16_transparent" 
 
 [editor]
 line-number = "relative"
 mouse = false
 cursorline = true
 bufferline = "multiple"
+color-modes = true
 
 [editor.cursor-shape]
 insert = "bar"
@@ -16,20 +16,16 @@ select = "underline"
 hidden = false
 
 [editor.statusline]
-left = ["mode", "file-name", "spinner"]
-center = []
-right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+left = ["mode", "file-name"]
+center = ["spinner"]
+right = ["version-control", "diagnostics", "position", "file-type"]
 separator = "│"
 
-[editor.auto-pairs]
-'(' = ')'
-'{' = '}'
-'[' = ']'
-'"' = '"'
-'`' = '`'
+[editor.indent-guides]
+render = true
 
-# [editor.indent-guides]
-# render = true
+[editor.lsp]
+display-inlay-hints = false
 
 [keys.normal]
 up = "no_op"
@@ -40,13 +36,6 @@ pageup = "no_op"
 pagedown = "no_op"
 home = "no_op"
 end = "no_op"
-'{' = ["goto_prev_paragraph", "collapse_selection", "move_line_up"]
-'}' = ["goto_next_paragraph", "collapse_selection"]
-'C-u' = ["page_up", "align_view_center"]
-'C-d' = ["page_down", "align_view_center"]
-'A-w' = ":write"
-'A-y' = ['extend_to_line_bounds', 'trim_selections', 'yank'] # Copy line with one leading whitesapce and all trailing whitespace removed.
-# Do gll<insert mode + ' '><normal_mode>Y to paste next to current line
 
 [keys.insert]
 up = "no_op"
@@ -57,4 +46,3 @@ pageup = "no_op"
 pagedown = "no_op"
 home = "no_op"
 end = "no_op"
-'A-w' = ["normal_mode", ":write"]
