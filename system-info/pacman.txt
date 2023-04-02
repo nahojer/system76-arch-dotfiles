@@ -62,6 +62,7 @@ linux-firmware
 lld
 llvm
 lshw
+lua-language-server
 m4
 make
 man-db
@@ -89,6 +90,7 @@ pipewire-pulse
 pkgconf
 polybar
 postman-bin
+python-lsp-server
 python-pip
 qutebrowser
 reflector
@@ -106,7 +108,9 @@ sxhkd
 system76-driver
 system76-firmware
 system76-firmware-daemon
+taplo-cli
 terraform
+terraform-ls
 texinfo
 tmux
 tree
@@ -114,10 +118,13 @@ ttf-font-awesome
 ttf-inconsolata
 ttf-material-design-icons-desktop-git
 ttf-meslo-nerd-font-powerlevel10k
+typescript-language-server
 unzip
 vifm
 vim
 visual-studio-code-bin
+vscode-css-languageserver
+vscode-html-languageserver
 wezterm
 wget
 which
@@ -168,4 +175,5 @@ xss-lock
 yaml-language-server
 yay
 zig
+zls
 zsh

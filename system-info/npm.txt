@@ -1,3 +1,5 @@
+awk-language-server@0.9.5
+@bitwarden/cli@2023.3.0
 corepack@0.15.2
 eslint@8.33.0
 npm@8.19.3
