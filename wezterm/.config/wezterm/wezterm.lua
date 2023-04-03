@@ -1,36 +1,43 @@
-local horizontalPadding = 10;
-local verticalPadding = 10;
+local wezterm = require 'wezterm'
 
-return {
-	-- OpenGL for GPU acceleration, Software for CPU
-	front_end = "OpenGL",
+local config = {}
+if wezterm.config_builder then
+  config = wezterm.config_builder()
+end
+
+-- OpenGL for GPU acceleration, Software for CPU
+config.front_end = "OpenGL"
 
 	-- Colors
-	color_scheme = 'deep',
+config.color_scheme = 'deep'
+-- color_scheme = 'Man Page'
 
 	-- Transparency
-	window_background_opacity = 1;
+config.window_background_opacity = 1
 
 	-- Font
-	font_size = 10,
-	line_height = 1.0,
-	dpi = 96.0,
+config.font_size = 10
+config.line_height = 1.0
+config.dpi = 96.0
 
-	-- Padding
-	window_padding = {
-		left = horizontalPadding,
-		right = horizontalPadding,
-		top = verticalPadding,
-		bottom = verticalPadding,
-	},
-
-	-- Tab Bar
-	enable_tab_bar = true,
-	hide_tab_bar_if_only_one_tab = true,
-	show_tab_index_in_tab_bar = false,
-	tab_bar_at_bottom = true,
-
-	-- General
-	automatically_reload_config = true,
-	window_close_confirmation = "NeverPrompt",
+-- Padding
+local horizontalPadding = 10;
+local verticalPadding = 10;
+config.window_padding = {
+	left = horizontalPadding,
+	right = horizontalPadding,
+	top = verticalPadding,
+	bottom = verticalPadding,
 }
+
+-- Tab Bar
+config.enable_tab_bar = true
+config.hide_tab_bar_if_only_one_tab = true
+config.show_tab_index_in_tab_bar = false
+config.tab_bar_at_bottom = true
+
+-- General
+config.automatically_reload_config = true
+config.window_close_confirmation = "NeverPrompt"
+
+return config
