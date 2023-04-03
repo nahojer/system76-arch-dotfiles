@@ -9,8 +9,8 @@ end
 config.front_end = "OpenGL"
 
 	-- Colors
-config.color_scheme = 'deep'
--- color_scheme = 'Man Page'
+config.color_scheme = 'Atelier Dune Light (base16)'
+-- config.color_scheme = 'AdventureTime'
 
 	-- Transparency
 config.window_background_opacity = 1
@@ -21,8 +21,8 @@ config.line_height = 1.0
 config.dpi = 96.0
 
 -- Padding
-local horizontalPadding = 10;
-local verticalPadding = 10;
+local horizontalPadding = 5;
+local verticalPadding = 5;
 config.window_padding = {
 	left = horizontalPadding,
 	right = horizontalPadding,
