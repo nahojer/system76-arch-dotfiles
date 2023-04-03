@@ -1,4 +1,4 @@
-theme = "base16_transparent" 
+theme = "jacme" 
 
 [editor]
 line-number = "relative"
@@ -6,6 +6,8 @@ mouse = false
 cursorline = true
 bufferline = "multiple"
 color-modes = true
+true-color = true
+undercurl = true
 
 [editor.cursor-shape]
 insert = "bar"
