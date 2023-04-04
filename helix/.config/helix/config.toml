@@ -1,7 +1,7 @@
 theme = "jacme" 
 
 [editor]
-line-number = "relative"
+# line-number = "relative"
 mouse = false
 cursorline = true
 bufferline = "multiple"
@@ -18,18 +18,20 @@ select = "underline"
 hidden = false
 
 [editor.statusline]
-left = ["mode", "file-name"]
-center = ["spinner"]
-right = ["version-control", "diagnostics", "position", "file-type"]
+left = ["file-modification-indicator", "file-name"]
+center = ["version-control"]
+right = ["position", "separator", "spacer", "position-percentage", "spacer", "separator", "total-line-numbers", "spacer", "spacer"]
 separator = "│"
 
 [editor.indent-guides]
 render = true
 
 [editor.lsp]
-display-inlay-hints = false
+display-inlay-hints = true
 
 [keys.normal]
+X = "extend_line_above"
+i = [":toggle lsp.display-inlay-hints", "insert_mode"]
 up = "no_op"
 down = "no_op"
 left = "no_op"
@@ -39,7 +41,12 @@ pagedown = "no_op"
 home = "no_op"
 end = "no_op"
 
+[keys.normal.space]
+q = ":quit"
+w = ":write"
+
 [keys.insert]
+esc = [":toggle lsp.display-inlay-hints", "normal_mode"]
 up = "no_op"
 down = "no_op"
 left = "no_op"
